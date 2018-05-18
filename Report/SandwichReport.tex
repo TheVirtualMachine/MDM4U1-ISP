@@ -1,0 +1,53 @@
+\documentclass[letterpaper,12pt]{report}
+
+\usepackage{import}
+\usepackage{parskip}
+\usepackage{varioref}
+\usepackage{listings}
+%\usepackage[margin=1in]{geometry}
+%\usepackage[showframe]{geometry}
+\usepackage{float}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+%\titleformat{\chapter}[display]{\Huge\bfseries}{\chaptertitlename{} \thechapter}{5pt}{\LARGE}
+
+%\newlength{\textW}
+%\settowidth{\textW}{abcdefghijklmnopqrstuvwxyz}
+%\geometry{textwidth=3\textW}
+
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{References.bib}
+\setlength{\bibitemsep}{\baselineskip}
+
+\frenchspacing
+
+\title{\Huge What is a sandwich?\\\LARGE A Data Analysis}
+\author{Vincent Macri \and David White \and Matthew Stuart \and Group D}
+%\date{June DD, 2018}
+
+\NewDocumentCommand{\varSI}{}{\SI[number-math-rm=\mathnormal,parse-numbers=false]}
+
+\begin{document}
+	\pagenumbering{gobble}
+	\maketitle
+	\pagenumbering{roman}
+	\input{Abstract}
+	\tableofcontents
+	\clearpage
+	\pagenumbering{arabic}
+	\part{Survey}\label{part:survey}
+		\import{Survey/}{Survey}
+	\part{Analysis}\label{part:analysis}
+		\import{Analysis/}{Analysis}
+	\nocite{*}
+	\printbibliography
+\end{document}
