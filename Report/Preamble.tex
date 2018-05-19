@@ -1,0 +1,39 @@
+\documentclass[letterpaper,12pt]{report}
+
+\usepackage{import}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{varioref}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[backend=biber]{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{commath}
+\usepackage{siunitx}
+\usepackage{titling}
+\usepackage[hidelinks]{hyperref}
+
+%\newlength{\textW}
+%\settowidth{\textW}{abcdefghijklmnopqrstuvwxyz}
+%\geometry{textwidth=3\textW}
+
+\addbibresource{References.bib}
+\setlength{\bibitemsep}{\baselineskip}
+
+\frenchspacing
+
+\NewDocumentCommand{\varSI}{}{\SI[number-math-rm=\mathnormal,parse-numbers=false]}
+
+% Title page setup.
+\newcommand{\subtitle}[1]{\gdef\subT{#1}}
+\newcommand{\subT}{}
+
+\newcommand{\institute}[1]{\gdef\instuteName{#1}}
+\newcommand{\instuteName}{}
+
+% Title page formatting.
+\pretitle{\begin{center}\Huge}
+\posttitle{\par\end{center}\vskip 1ex}
+\renewcommand{\maketitlehookb}{\begin{center}\LARGE\subT\end{center}\vskip 10ex}
+\renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
