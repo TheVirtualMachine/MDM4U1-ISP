@@ -14,9 +14,13 @@
 \usepackage{siunitx}
 
 % Miscellaneous
+\usepackage{xparse}
 \usepackage{import}
 \usepackage{varioref}
 \usepackage{float}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tasks}
 
 % Citations
 \usepackage[backend=biber]{biblatex}
@@ -24,10 +28,6 @@
 
 \addbibresource{References.bib}
 \setlength{\bibitemsep}{\baselineskip}
-
-\frenchspacing
-
-\NewDocumentCommand{\varSI}{}{\SI[number-math-rm=\mathnormal,parse-numbers=false]}
 
 % Title page setup.
 \newcommand{\subtitle}[1]{\gdef\subT{#1}}
@@ -41,3 +41,7 @@
 \posttitle{\par\end{center}\vskip 1ex}
 \renewcommand{\maketitlehookb}{\begin{center}\LARGE\subT\end{center}\vskip 10ex}
 \renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
+
+\frenchspacing
+
+\input{CustomMacros}
