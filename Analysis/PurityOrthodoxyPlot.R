@@ -15,6 +15,7 @@ lockBinding("NUM_RESPONDENTS", globalenv())
 
 sandwichResponses <- as.matrix(respondents)[,QUESTIONS_START:QUESTIONS_END] # Convert responses to a matrix.
 sandwichResponses <- apply(sandwichResponses, 1, as.numeric) # Make the matrix numeric.
+sandwichResponses <- 5 - sandwichResponses
 
 NUM_QUESTIONS <- nrow(sandwichResponses) # The number of sandwich questions.
 lockBinding("NUM_QUESTIONS", globalenv())
@@ -25,7 +26,7 @@ averageResponse <- numeric(NUM_QUESTIONS)
 
 # Sum up the total score for each question by respondent.
 for (i in 1:NUM_RESPONDENTS) {
-	totalResponse <- totalResponse + (sandwichResponses[,i] - 5)
+	totalResponse <- totalResponse + (sandwichResponses[,i])
 }
 averageResponse <- totalResponse / NUM_RESPONDENTS # Divide by the number of respondents to find the mean.
 
@@ -33,19 +34,17 @@ orthodoxyScores <- numeric(NUM_RESPONDENTS)
 purityScores <- numeric(NUM_RESPONDENTS)
 
 for (i in 1:NUM_RESPONDENTS) {
-	orthodoxyScores[i] <- cosineSimilarity(sandwichResponses[,i] - 5, averageResponse)
-	purityScores[i] <- sum(10 - sandwichResponses[,i])
+	orthodoxyScores[i] <- cosineSimilarity(sandwichResponses[,i], averageResponse)
+	purityScores[i] <- sum(sandwichResponses[,i])
 }
+purityScores <- (purityScores - mean(purityScores)) / sd(purityScores)
 
-print(orthodoxyScores)
-print(purityScores)
-
-lin.mod <- lm(orthodoxyScores ~ purityScores)
-lin.mod2 <- lm(orthodoxyScores ~ I(purityScores^2) + purityScores)
+lo <- loess(orthodoxyScores ~ purityScores)
 
 pdf("PurityVsOrthodoxy.pdf")
 plot(purityScores, orthodoxyScores, xlab="Purity", ylab="Orthodoxy", main="Purity vs Orthodoxy")
+lines(predict(lo), col="red", lwd=2)
 invisible(dev.off())
 
-#results <- rbind(purityScores, orthodoxyScores)
-#write.csv(results, "Results.csv")
+results <- rbind(purityScores, orthodoxyScores)
+write.csv(results, "Results.csv")
