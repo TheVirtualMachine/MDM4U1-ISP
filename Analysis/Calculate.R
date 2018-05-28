@@ -43,7 +43,7 @@ for (i in 1 : NUM_RESPONDENTS) {
 	orthodoxyScores[i] <- cosineSimilarity(sandwichResponses[,i], averageResponse)
 	purityScores[i] <- sum(sandwichResponses[,i])
 }
-purityScores <- (purityScores - mean(purityScores)) / sd(purityScores)
+purityScores <- purityScores / (5 * NUM_QUESTIONS)
 
 # Put data into frame.
 data <- data.frame(purity = purityScores, orthodoxy = orthodoxyScores, grade = respondents[,GRADE_COLUMN], subjects = respondents[,SUBJECTS_COLUMN], background = respondents[,BACKGROUND_COLUMN], stream = respondents[,STREAM_COLUMN])
