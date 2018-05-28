@@ -7,7 +7,7 @@ source("Calculate.R")
 # Create the plot.
 dataPlot <- ggplot(data, aes(purity, orthodoxy)) # Setup the plot.
 #dataPlot <- dataPlot + coord_cartesian(ylim = c(-1, 1)) # Set the graph limits.
-dataPlot <- dataPlot + geom_point(aes(colour = cat)) # Add the data points.
+dataPlot <- dataPlot + geom_point(aes(colour = stream)) # Add the data points.
 dataPlot <- dataPlot + geom_smooth(method = loess, level = 0.95, colour = "black", size = 0.5) # Add the confidence curve.
 dataPlot <- dataPlot + geom_smooth(method = lm, se = FALSE, colour = "black", size = 0.5, linetype="dashed") # Add the line of best fit.
 dataPlot <- dataPlot + labs(x = "Purity", y = "Orthodoxy", colour = "Academic Stream") # Give axes and legend proper labels.

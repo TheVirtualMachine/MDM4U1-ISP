@@ -2,9 +2,17 @@
 
 source("Functions.R")
 
-CATEGORY <- 4 # What column the categorical data is in.
+# Define the constants for what columns data is in inside the CSV file.
+GRADE_COLUMN <- 1 # What column the grade data is in.
+SUBJECTS_COLUMN <- 2 # What column the favourite subjects data is in.
+BACKGROUND_COLUMN <- 3 # What column the ethnic background data is in.
+STREAM_COLUMN <- 4 # What column the stream data is in.
 QUESTIONS_START <- 6 # What column the sandwich questions start at.
 QUESTIONS_END <- 48 # What column the sandwich questions end at.
+lockBinding("GRADE_COLUMN", globalenv())
+lockBinding("SUBJECTS_COLUMN", globalenv())
+lockBinding("BACKGROUND_COLUMN", globalenv())
+lockBinding("STREAM_COLUMN", globalenv())
 lockBinding("QUESTIONS_START", globalenv())
 lockBinding("QUESTIONS_END", globalenv())
 
@@ -38,4 +46,4 @@ for (i in 1 : NUM_RESPONDENTS) {
 purityScores <- (purityScores - mean(purityScores)) / sd(purityScores)
 
 # Put data into frame.
-data <- data.frame(purity = purityScores, orthodoxy = orthodoxyScores, cat = respondents[,CATEGORY])
+data <- data.frame(purity = purityScores, orthodoxy = orthodoxyScores, grade = respondents[,GRADE_COLUMN], subjects = respondents[,SUBJECTS_COLUMN], background = respondents[,BACKGROUND_COLUMN], stream = respondents[,STREAM_COLUMN])
