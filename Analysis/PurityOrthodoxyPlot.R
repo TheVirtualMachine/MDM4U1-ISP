@@ -1,5 +1,4 @@
 # This is a program to calculate and plot the orthodoxy score on the sandwich spectrum for all respondents.
-# Unless otherwise specified, throughout this file, "sandwich question" refers to a question about either sandwiches or ingredients.
 
 library(ggplot2)
 source("Calculate.R")
