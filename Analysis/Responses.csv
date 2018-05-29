@@ -47,3 +47,42 @@ Grade 9,Library,Georgian,Academic,,5,7,7,5,4,2,4,7,5,5,4,9,9,0,0,9,0,3,4,3,4,6,1
 Grade 12,Computer Science and Technology,European,Academic,,9,10,10,10,10,10,7,9,5,6,9,9,7,4,8,9,9,9,9,1,0,0,9,10,10,10,10,3,8,8,4,0,8,9,9,9,0,0,0,0,0,0,0
 Grade 9,Physical Education;Social Sciences,Asian ,Academic,,10,9,8,9,10,8,6,4,6,6,6,5,8,2,6,8,3,4,8,0,0,0,5,10,8,10,10,10,7,8,0,10,10,0,10,8,0,10,3,0,0,0,0
 Grade 12,Science,Jewish,Academic,,10,10,10,10,10,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,10,10,10,10,10,0,10,10,0,0,10,0,0,0,0,0,0,0
+Grade 12,Business;Social Sciences,Jewish ,Academic,,10,10,10,10,10,10,10,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0,0,0,0,0,0
+Grade 12,Math;Science,Asian ,Academic,,10,10,10,10,10,10,10,10,8,8,8,8,0,0,7,10,8,8,6,0,0,0,10,10,10,10,10,10,10,10,7,5,3,7,6,5,2,10,2,3,0,0,0
+Grade 12,Social Sciences,Georgia ,Academic,,2,7,1,7,9,3,3,10,10,3,10,2,2,3,2,1,10,1,1,2,2,2,10,1,10,10,10,10,0,2,0,0,0,0,1,10,1,0,0,0,1,0,10
+Grade 12,Arts;English,Russian ,Academic,,10,10,10,10,10,10,10,10,10,10,10,10,10,3,10,10,10,10,10,3,1,2,10,0,10,10,10,10,9,10,10,10,9,10,10,10,10,10,10,10,10,10,10
+Grade 12,Social Sciences,Vietnamese ,Academic,,0,0,5,7,10,8,6,10,6,5,1,4,0,0,0,0,2,0,0,0,0,0,0,4,9,10,10,7,4,2,0,2,1,0,5,4,1,0,3,6,0,0,0
+Grade 12,Dota 2,y Hey I’m going on the night I’m so tired I’m sorry I’m going on my break and then I’m just leaving my office I have a nice night to my dad I can do a few things minutes do a nice ,Locally developed ,,6,5,3,0,10,5,2,1,0,0,5,0,8,0,1,9,0,0,0,0,1,0,10,10,10,10,10,10,10,10,0,0,4,10,0,0,0,0,0,0,0,0,10
+Grade 9,Arts;English;Social Sciences,Jewish-Polish,Academic,,10,10,10,10,10,10,5,10,5,5,5,5,5,0,5,10,10,10,5,0,0,0,10,10,10,10,10,10,10,10,1,10,10,1,1,1,1,0,0,1,0,0,0
+Grade 12,Arts;Social Sciences,half white half latina,Academic,,10,10,10,10,10,7,0,10,0,0,0,0,5,0,0,5,5,5,0,0,0,0,0,10,10,10,10,10,10,10,0,10,10,0,0,0,0,0,0,0,0,0,0
+Grade 12,Business;Physical Education;Special Education,Italian ,Applied,,7,7,10,10,10,2,2,6,5,3,6,3,4,0,0,1,2,2,2,0,0,0,3,8,7,7,8,5,5,3,2,8,9,7,1,6,0,0,1,0,0,0,0
+Grade 12,Arts;Business;English;Physical Education,Greek/Lebanese,Academic,,3,6,0,6,10,1,0,7,0,0,7,0,2,0,0,0,0,0,0,0,0,0,8,10,5,10,10,5,0,0,0,10,10,10,0,8,0,0,0,0,0,0,0
+Grade 11,Math,,Academic,,7,10,10,10,10,10,10,10,10,10,10,10,0,0,10,10,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,10,0,0,0,0,0,0
+Teacher,Science,European,Teacher,Science;Special Education,10,10,10,10,10,9,8,8,7,7,9,9,6,4,9,2,6,7,7,1,0,0,6,10,10,10,10,10,10,9,4,10,10,4,9,9,4,0,4,1,0,0,0
+Grade 11,English;Physical Education,,Applied,,7,10,3,10,10,7,0,10,0,0,7,7,0,10,10,10,0,0,0,0,0,0,10,10,10,10,10,10,10,10,2,4,1,10,0,5,2,2,1,0,0,0,10
+Grade 12,Arts;Physical Education,Korean,Academic,,7,10,2,5,0,0,0,9,0,0,1,0,9,0,9,9,1,0,0,0,0,0,10,10,10,10,10,2,10,10,7,10,10,0,5,10,10,10,10,10,0,1,8
+Grade 12,Arts,Filipino,Academic,,3,7,6,6,6,8,10,7,2,4,3,3,4,0,0,5,3,3,2,0,0,0,5,10,10,10,10,8,8,8,8,8,7,8,6,8,0,5,0,5,0,3,5
+Grade 12,Business,Korean,Gifted,,7,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,6,10,4,10,5,2,10,9,2,9,9,9,8,7,7,7,7,8,7,7
+Grade 12,Physical Education,Filipino,Academic,,7,6,3,5,9,7,5,3,5,6,7,5,5,5,4,3,3,3,7,2,0,6,3,6,7,10,10,10,10,10,5,10,10,7,4,9,6,0,8,8,9,0,0
+Grade 12,Arts;English,Russian,Academic,,10,10,10,10,10,7,6,3,4,4,2,6,10,0,3,0,0,0,0,0,0,0,0,10,10,10,10,10,10,10,6,8,8,9,10,7,4,0,0,0,0,0,0
+Grade 12,Business;Computer Science and Technology;Math,indian,MaCS,,8,10,0,3,9,5,1,10,6,6,5,7,9,4,9,10,9,1,5,0,3,0,10,2,10,10,10,10,8,8,7,9,8,4,3,5,3,0,0,0,0,2,3
+Grade 11,Computer Science and Technology,white,Academic,,10,10,10,10,10,6,4,7,4,4,10,7,2,0,10,9,10,10,3,0,0,0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,3,10,10
+Grade 12,Arts,Jewish,Academic,,10,10,9,9,7,7,6,6,5,3,6,5,2,0,4,5,4,3,2,0,0,0,4,7,5,9,3,0,0,1,4,8,7,0,2,7,6,1,7,7,0,7,4
+Grade 12,Science;Social Sciences,Greek,Gifted,,10,10,8,7,10,5,3,4,1,0,1,2,3,0,3,8,0,0,1,0,0,0,4,10,10,10,10,10,10,10,8,10,10,7,8,8,4,0,7,9,0,2,1
+Grade 12,Computer Science and Technology;Science,Chinese,MaCS,,10,10,10,10,10,10,10,10,10,10,10,10,0,0,10,10,10,10,10,0,0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+Grade 12,Arts;Physical Education;Science,Russian,Gifted,,10,10,7,10,10,8,3,10,0,1,3,3,6,0,5,6,8,8,0,0,0,0,10,10,10,10,10,10,1,1,6,8,8,0,3,2,0,0,0,1,0,0,0
+Grade 11,Math;Physical Education,South Korean,MaCS,,4,9,7,7,6,5,3,4,3,3,3,3,2,0,0,0,1,1,0,0,0,0,2,10,10,10,10,9,9,7,4,8,8,4,0,6,0,0,0,3,0,0,0
+Grade 11,Co-op and Leadership;Science,Bangladeshian,MaCS,,10,10,10,6,10,5,3,1,0,0,7,5,4,0,0,0,0,0,1,0,0,0,0,10,10,10,10,10,5,6,1,10,10,0,0,10,0,0,0,2,0,0,0
+Grade 12,Drama,East Asian,Gifted,,10,10,10,10,10,2,1,4,1,1,1,1,7,0,10,10,1,1,0,0,0,0,4,10,10,10,10,10,10,10,5,10,10,10,10,4,4,3,0,1,1,1,0
+Grade 11,Science,,Academic,,8,9,10,7,8,3,2,5,4,3,2,4,0,1,0,0,4,4,5,3,0,0,0,10,10,10,10,10,9,7,6,8,3,6,5,7,2,0,0,3,0,0,0
+Grade 11,Arts;English;Social Sciences,Italian,MaCS,,10,10,9,10,9,7,6,5,6,3,4,3,7,1,5,7,5,5,1,0,0,0,9,10,10,10,10,10,10,9,8,10,10,8,9,9,6,8,1,3,2,1,2
+Grade 11,English;Math;Science;Social Sciences,White Jew,Gifted,,10,10,10,9,5,10,2,10,0,0,0,6,0,0,7,4,10,10,0,0,0,0,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+Grade 11,Math;Science,Black,Gifted,,10,10,10,10,7,10,0,10,0,0,0,0,0,0,10,0,10,10,0,0,0,0,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+Grade 11,Computer Science and Technology;English;Library;Physical Education;Special Education,Vietnamese,Gifted,,7,10,10,10,10,3,8,10,1,0,0,0,0,0,10,10,10,10,0,0,0,0,10,10,10,0,10,10,10,10,0,10,10,10,10,10,10,6,10,10,10,10,10
+Grade 11,Arts;Business;Computer Science and Technology;Co-op and Leadership;English;Languages;Library;Math;Physical Education;Science;Social Sciences;Special Education;despacito,Greeceian,despacito,,5,5,5,5,5,5,5,5,5,5,5,5,5,5,10,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,5,5,8,5,5,5,5,5,5,10
+Grade 9,Computer Science and Technology,Better then you,I am better than you,,2,8,6,8,0,1,1,10,1,1,2,1,0,1,2,10,9,0,1,1,2,1,10,10,10,10,10,4,3,2,4,1,1,1,0,0,0,0,0,0,0,0,10
+Grade 9,How to be scared,Serbian,Hannah River,,9,1,1,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,10,6,6,9,10,0,10,0,6,0,0,0,6,10,0,0,0,0,0,0,0,0,0,0
+Grade 9,Arts;Business;English;Physical Education;Social Sciences,Latino/Italian,MaCS,,6,10,10,8,10,7,2,8,1,0,0,0,4,0,1,0,5,4,0,0,0,0,3,10,9,10,10,7,3,1,0,8,6,5,7,4,0,0,0,0,0,0,0
+Grade 12,Math,Arab,Academic,,10,10,10,0,7,10,0,10,7,10,4,0,10,0,0,0,0,0,0,0,0,0,0,5,10,10,10,10,10,10,5,10,0,10,0,10,0,0,0,10,0,0,0
+Grade 12,Drugs,Latino,Academic,,10,10,10,10,10,10,4,10,3,0,10,8,10,0,10,10,0,0,0,0,0,0,10,10,8,10,6,7,5,5,5,10,10,0,10,10,3,3,6,4,0,5,0
+Grade 12,Architecture ,Chinese,Academic,,5,9,4,2,10,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,5,10,10,10,10,10,10,10,10,10,10,10,10,10,7,5,2,10,0,0,3
