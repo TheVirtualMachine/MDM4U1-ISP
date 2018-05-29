@@ -1,9 +1,9 @@
-\chapter{Methodology}
+\chapter{Metrics}
 
 \section{Axes metrics}
 We have two metrics used in our calculations: purity and orthodoxy.
 
-Purity is how pure a respondents definition of a sandwich is.
+Purity is how pure a respondent's definition of a sandwich is.
 The less things a respondent considers a sandwich, the greater their purity score will be.
 Similarly, the more things a respondent considers a sandwich, the lower their purity score will be.
 
@@ -74,7 +74,7 @@ Since a lower response to a question implies a more pure definition of a sandwic
 To calculate orthodoxy for each respondent, we take the score for each question as a dimension of a vector, which creates a vector in $43$-dimensional Euclidean space.
 
 We also calculate the mean response for each question, and create an additional $\real^{43}$ vector from that.
-This vector is referred to referred to as the mean vector, and denoted as $\vv{m}$.
+This vector is referred to as the mean vector, and denoted as $\vv{m}$.
 
 The orthodoxy score for a respondent is defined as the cosine similarity between the respondent's $\real^{43}$ vector and $\vv{m}$.
 
