@@ -17,17 +17,19 @@ We describe the general scoring system in \cref{subsec:scoring}.
 This scoring system is used to calculate the purity metric described in \cref{subsec:purityMetric} and the orthodoxy metric described in \cref{subsec:orthodoxyMetric}.
 
 \subsection{Scoring}\label{subsec:scoring}
-While participants answered each sandwich question on a 0 to 10 scale, it is more convenient to perform calculations using a $-5$ to 5 scale.
+While participants answered each food question on a 0 to 10 scale, it is more convenient to perform calculations using a $-5$ to 5 scale.
 We converted responses from the 0 to 10 scale to the $-5$ to 5 scale by subtracting each response from 5.
 
-Formally, for each response to a sandwich question, we calculate the score for the response by the passing the response through the sandwich spectrum function, defined in \cref{def:sandwichSpectrum}
+Formally, for each response to a food question, we calculate the score for the response by the passing the response through the sandwich spectrum function, defined in \cref{def:sandwichSpectrum}.
 
 \begin{definition}[Sandwich spectrum function]\label{def:sandwichSpectrum}
 	The sandwich spectrum function is defined as:
 	\begin{equation}
-		s \from \set{x \in \integer \such 0 \leq x \leq 10} \to \set{x \in \integer \such -5 \leq x \leq 5}\ \text{by}\ s(x) = 5 - x
+		s \from \set{x \in \real \such 0 \leq x \leq 10} \to \set{x \in \real \such -5 \leq x \leq 5}\ \text{by}\ s(x) = 5 - x
 	\end{equation}
 \end{definition}
+Due to the format of our survey, all responses are integers, and are mapped to another integer by the sandwich spectrum function.
+Although, in principle, the sandwich spectrum function works for real numbers as well.
 
 We can create a table for $s$:
 \begin{equation*}
@@ -49,9 +51,55 @@ We can create a table for $s$:
 
 One will note that this gives responses that were originally high a lower score.
 This is intentional.
-\Cref{subsec:purityMetric} will show it to be useful for calculating the purity metric.
-\Cref{subsec:orthodoxyMetric} will show it to be irrelevant for calculating the orthodoxy metric.
+\Cref{subsec:purityMetric} will show it to be useful for calculating the purity metric, and \cref{subsec:orthodoxyMetric} will show it to be irrelevant for calculating the orthodoxy metric.
 
 \subsection{Purity}\label{subsec:purityMetric}
+The purity score for a respondent is defined as the sum of a respondent's scores divided by the maximum possible score.
+
+The maximum score for a question is 5, and there are 43 food questions.
+This means that the maximum possible score is $43 \times 5 = 215$.
+
+\begin{definition}[Sadwich purity function]
+	For a given response with a set of 43 food answers, $A$, we define the sandwich purity function as:
+	\begin{equation}
+		p \from \real^{43} \to \real\ \text{by}\ p(A) = \frac{\sum_{i = 1}^{43} A_i}{215}
+	\end{equation}
+\end{definition}
+
+This definition illustrates why we subtract each response from 5 to get the score.
+The sandwich spectrum function will assign higher purity values for lower responses.
+Since a lower response to a question implies a more pure definition of a sandwich, \cref{def:sandwichSpectrum} is a valid metric.
 
 \subsection{Orthodoxy}\label{subsec:orthodoxyMetric}
+To calculate orthodoxy for each respondent, we take the score for each question as a dimension of a vector, which creates a vector in $43$-dimensional Euclidean space.
+
+We also calculate the mean response for each question, and create an additional $\real^{43}$ vector from that.
+This vector is referred to referred to as the mean vector, and denoted as $\vv{m}$.
+
+The orthodoxy score for a respondent is defined as the cosine similarity between the respondent's $\real^{43}$ vector and $\vv{m}$.
+
+\begin{definition}[Mean vector]
+	To calculate the value of the mean vector, $\vv{m}$:
+
+	Let $A \in \real^{43}$ be the set of response vectors.
+	Then, $n(A)$ is the cardinality of the set $A$.
+
+	Then:
+	\begin{equation}
+		\vv{m} = \frac{\sum_{i = 1}^{n(A)} A_i}{n(A)}
+	\end{equation}
+\end{definition}
+
+\begin{definition}[Sandwich orthodoxy function]
+	To calculate the orthodoxy score for a respondent:
+
+	Let $\vv{r}$ be a vector in $\real^{43}$ defined as having its each of its components equal to the score for each food question.
+	\begin{equation}
+		o \from \real^{43} \to \real\ \text{by}\ o(\vv{r}) = \frac{\vv{r} \cdot \vv{m}}{\norm{\vv{r}} \norm{\vv{m}}}
+	\end{equation}
+\end{definition}
+
+Since we are calculating orthodoxy as the cosine of the angle between two vectors, it is useful to have some vector components be negative, as that allows respondents to have a negative orthodoxy score if they answer opposite to the mean response.
+It does not matter what direction the vectors are in, as we are only looking at the angle between them.
+This means that the sandwich spectrum function could have been defined as subtracting 5 instead of subtracting from 5 for the purposes of the orthodoxy function.
+Since both definitions would have worked for orthodoxy, we stick with \cref{def:sandwichSpectrum} for the sake of consistency with the purity metric.
