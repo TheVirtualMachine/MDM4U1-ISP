@@ -1,1 +1,57 @@
 \chapter{Methodology}
+
+\section{Axes metrics}
+We have two metrics used in our calculations: purity and orthodoxy.
+
+Purity is how pure a respondents definition of a sandwich is.
+The less things a respondent considers a sandwich, the greater their purity score will be.
+Similarly, the more things a respondent considers a sandwich, the lower their purity score will be.
+
+Orthodoxy is a measure of how much a respondent differs from the mean set of responses.
+The less a respondent's answers differ from the mean set of answers, the greater their orthodoxy score will be.
+Similarly, the more a respondent's answers differ from the mean set of answers, the lower their orthodoxy score will be.
+
+Both purity and orthodoxy are bound in the range $[-1, 1]$.
+
+We describe the general scoring system in \cref{subsec:scoring}.
+This scoring system is used to calculate the purity metric described in \cref{subsec:purityMetric} and the orthodoxy metric described in \cref{subsec:orthodoxyMetric}.
+
+\subsection{Scoring}\label{subsec:scoring}
+While participants answered each sandwich question on a 0 to 10 scale, it is more convenient to perform calculations using a $-5$ to 5 scale.
+We converted responses from the 0 to 10 scale to the $-5$ to 5 scale by subtracting each response from 5.
+
+Formally, for each response to a sandwich question, we calculate the score for the response by the passing the response through the sandwich spectrum function, defined in \cref{def:sandwichSpectrum}
+
+\begin{definition}[Sandwich spectrum function]\label{def:sandwichSpectrum}
+	The sandwich spectrum function is defined as:
+	\begin{equation}
+		s \from \set{x \in \integer \such 0 \leq x \leq 10} \to \set{x \in \integer \such -5 \leq x \leq 5}\ \text{by}\ s(x) = 5 - x
+	\end{equation}
+\end{definition}
+
+We can create a table for $s$:
+\begin{equation*}
+	\begin{array}{l|r}
+		x  & s(x)\\\hline
+		0  &  5\\
+		1  &  4\\
+		2  &  3\\
+		3  &  2\\
+		4  &  1\\
+		5  &  0\\
+		6  & -1\\
+		7  & -2\\
+		8  & -3\\
+		9  & -4\\
+		10 & -5\\
+	\end{array}
+\end{equation*}
+
+One will note that this gives responses that were originally high a lower score.
+This is intentional.
+\Cref{subsec:purityMetric} will show it to be useful for calculating the purity metric.
+\Cref{subsec:orthodoxyMetric} will show it to be irrelevant for calculating the orthodoxy metric.
+
+\subsection{Purity}\label{subsec:purityMetric}
+
+\subsection{Orthodoxy}\label{subsec:orthodoxyMetric}

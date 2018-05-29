@@ -10,13 +10,14 @@
 % Math
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{commath}
 \usepackage{siunitx}
+\usepackage{mathtools}
 
 % Miscellaneous
 \usepackage{xparse}
 \usepackage{import}
-\usepackage{varioref}
 \usepackage{float}
 \usepackage[draft]{graphicx}
 \usepackage{textcomp}
@@ -25,6 +26,9 @@
 % Citations
 \usepackage[backend=biber,urldate=iso8601]{biblatex}
 \usepackage[hidelinks]{hyperref}
+
+% References
+\usepackage{cleveref}
 
 \addbibresource{References.bib}
 \setlength{\bibitemsep}{\baselineskip}
@@ -41,6 +45,9 @@
 \posttitle{\par\end{center}\vskip 1ex}
 \renewcommand{\maketitlehookb}{\begin{center}\LARGE\subT\end{center}\vskip 10ex}
 \renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
+
+% Reference formatting.
+\creflabelformat{subsec}{subsection}
 
 \frenchspacing
 

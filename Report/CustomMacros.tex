@@ -23,3 +23,21 @@
 \NewTasks[label=\textbigcircle]{singlechoice}[\choice](1)
 
 \NewDocumentCommand{\blank}{O{3em}}{\rule{#1}{0.5pt}}
+
+% Math macros.
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\such}{\mid}
+\newcommand{\from}{:}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\complex}{\mathbb{C}}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+% Environment for definition of theorems.
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+
+% Environment for miscellaneous definitions.
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
