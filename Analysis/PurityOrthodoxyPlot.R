@@ -1,4 +1,4 @@
-# This is a program to calculate and plot the orthodoxy score on the sandwich spectrum for all respondents.
+# This is a program to plot orthodoxy vs purity on the sandwich spectrum for all respondents.
 
 library(ggplot2)
 source("Calculate.R")

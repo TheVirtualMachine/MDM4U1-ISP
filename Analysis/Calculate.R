@@ -1,4 +1,4 @@
-# This is a program to calculate the orthodoxy score on the sandwich spectrum for all respondents.
+# This is a program to calculate the orthodoxy and purity scores on the sandwich spectrum for all respondents.
 
 source("Functions.R")
 
