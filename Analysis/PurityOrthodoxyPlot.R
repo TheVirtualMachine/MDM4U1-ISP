@@ -16,3 +16,4 @@ makeScatterPlot <- function(categoryName, categoryTitle) {
 
 makeScatterPlot("stream", "Stream")
 makeScatterPlot("grade", "Grade")
+makeScatterPlot("background", "Ethnic Background")
