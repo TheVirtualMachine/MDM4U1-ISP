@@ -7,7 +7,7 @@ makeBarPlot <- function(categoryData, categoryName, categoryTitle) {
 	barPlotData <- data[categoryData %in% names(table(categoryData))[table(categoryData) > 1],] # Remove all categorical data points only occurring once, as these data are not helpful for a bar plot.
 
 	# Create the bar plot.
-	dataPlot <- ggplot(barPlotData, aes_string(categoryName, fill=categoryName), ) # Setup the plot.
+	dataPlot <- ggplot(barPlotData, aes_string(categoryName, fill=categoryName)) # Setup the plot.
 	dataPlot <- dataPlot + geom_bar() # Add the bar plot.
 	dataPlot <- dataPlot + labs(x = categoryTitle, y = "Count") # Give axes proper labels.
 	dataPlot <- dataPlot + theme(legend.position = "none") # Remove the legend.

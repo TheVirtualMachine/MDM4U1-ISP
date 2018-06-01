@@ -8,9 +8,8 @@ source("Calculate.R")
 residualPlotData <- data
 
 # Create the linear model.
-mod <- lm(orthodoxy ~ purity, data = residualPlotData)
+mod <- loess(orthodoxy ~ purity, data = residualPlotData)
 df <- augment(mod)
-print(df)
 
 # Create the residual plot.
 dataPlot <- ggplot(df, aes(.fitted, .resid)) + geom_point()
