@@ -33,14 +33,14 @@ boxPlotData <- data
 dataPlot <- ggplot(boxPlotData, aes(x = 1, y = purity)) # Setup the plot.
 dataPlot <- dataPlot + coord_cartesian(ylim = c(-1, 1)) # Set the graph limits.
 dataPlot <- dataPlot + geom_boxplot() # Add the data points.
-dataPlot <- dataPlot + labs(y = "Purity") # Give axes proper labels.
-dataPlot <- dataPlot + theme(legend.position = "none") # Remove the legend.
+dataPlot <- dataPlot + labs(x = "All respondents", y = "Purity") # Give axes proper labels.
+dataPlot <- dataPlot + theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) # Remove the x axis.
 ggsave("PurityBoxPlot.pdf", plot=dataPlot, width=2, height=8)
 
 # Create the orthodoxy plot.
 dataPlot <- ggplot(boxPlotData, aes(x = 1, y = orthodoxy)) # Setup the plot.
 dataPlot <- dataPlot + coord_cartesian(ylim = c(-1, 1)) # Set the graph limits.
 dataPlot <- dataPlot + geom_boxplot() # Add the data points.
-dataPlot <- dataPlot + labs(y = "Orthodoxy") # Give axes proper labels.
-dataPlot <- dataPlot + theme(legend.position = "none") # Remove the legend.
+dataPlot <- dataPlot + labs(x = "All respondents", y = "Orthodoxy") # Give axes proper labels.
+dataPlot <- dataPlot + theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) # Remove the x axis.
 ggsave("OrthodoxyBoxPlot.pdf", plot=dataPlot, width=2, height=8)
