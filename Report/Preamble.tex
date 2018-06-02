@@ -26,6 +26,7 @@
 \usepackage{tasks}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{longtable}
 
 % Citations
 \usepackage[backend=biber,urldate=iso8601]{biblatex}
@@ -51,9 +52,11 @@
 \renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
 
 % Reference formatting.
+\labelformat{chapter}{chapter~#1}
 \labelformat{section}{section~#1}
 \labelformat{subsection}{subsection~#1}
 \labelformat{figure}{figure~#1}
+\labelformat{table}{table~#1}
 \labelformat{equation}{equation~(#1)}
 
 % Source code formatting.
