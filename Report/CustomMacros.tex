@@ -17,7 +17,8 @@
 \NewDocumentCommand{\shortanswerquestion}{m o}{\subsection{#1}\IfNoValueF{#2}{#2~\\}\textit{Respondents were asked to provide a free response.}\\\\\blank[0.8\textwidth]}
 \NewDocumentCommand{\sandwichquestion}{m}{\subsection{#1}\textit{Respondents were asked to select only one option, with 0 being ``Not at all a sandwich'' and 10 being ``Definitely a sandwich''.}\linearselect}
 \NewDocumentCommand{\ingredientquestion}{m}{\subsection{#1}\textit{Respondents were asked to select only one option, with 0 being ``Not at all a sandwich ingredient'' and 10 being ``Definitely a sandwich ingredient''.}\linearselect}
-\NewDocumentCommand{\surveyimage}{m}{\begin{center}\includegraphics[height=1in]{Images/#1}\end{center}}
+\NewDocumentCommand{\surveyimage}{m}{\begin{center}\includegraphics[height=1in]{#1}\end{center}}
+\NewDocumentCommand{\graphimage}{O{} m}{\begin{center}\includegraphics[#1]{#2}\end{center}}
 
 \NewTasks[style=multiplechoice]{multiplechoice}[\choice](1)
 \NewTasks[label=\textbigcircle]{singlechoice}[\choice](1)

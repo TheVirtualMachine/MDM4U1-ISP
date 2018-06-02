@@ -1,0 +1,50 @@
+\chapter{Outliers}
+
+We begin our analysis by plotting the purity vs orthodoxy and performing both a linear and locally weighted regression analysis in \vref{fig:purityOrthodoxyStreamOutliers}.
+
+\section{With outliers}
+\begin{figure}[H]
+	\caption{A plot of purity vs orthodoxy with data points coloured based on stream.}
+	\label{fig:purityOrthodoxyStreamOutliers}
+	\graphimage[height=2.25in]{StreamPurityVsOrthodoxyOutliers}
+	Here, the solid curve is the result of the locally weighted regression analysis, and the shaded area is the 95\% confidence interval for that analysis.
+	The dashed line is the result of the linear regression.
+\end{figure}
+
+The linear regression has a positive slope, which proves the first hypothesis that purity and orthodoxy are positively correlated.
+
+\section{Identifying outliers}
+From the locally weighted regression analysis, it is clear that some points are extremely deviate.
+We next create residual plots using both the linear model and the locally weighted regression model to search for outliers in \vref{fig:linearResidualOutliers} and \vref{fig:lowessResidualOutliers}.
+
+\begin{figure}[H]
+	\caption{A residual plot using the linear regression analysis method.}
+	\label{fig:linearResidualOutliers}
+	\graphimage{LinearResidualPlot}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{A residual plot using the locally weighted regression analysis method.}
+	\label{fig:lowessResidualOutliers}
+	\graphimage{LoessResidualPlot}
+\end{figure}
+
+We will eliminate any points with an absolute residual exceeding a certain value.
+
+For the linear analysis, we exclude any points with an absolute residual above $0.76$.
+These are respondents \#81, and \#111.
+For the locally weighted analysis, we exclude any points with an absolute residual above $0.80$.
+This is just respondent \#81.
+
+So, respondents \#81 and \#111 are the only major outliers.
+We will continue the rest of the analysis as if they did not do the survey at all.
+
+\section{Outliers removed}
+We once again plot orthodoxy vs purity by stream in \vref{fig:purityOrthodoxyStreamNoOutliers}, this time with the outliers removed.
+\begin{figure}[H]
+	\caption{A plot of purity vs orthodoxy with data points coloured based on stream. Outliers have been removed.}
+	\label{fig:purityOrthodoxyStreamNoOutliers}
+	\graphimage[height=2.25in]{StreamPurityVsOrthodoxyNoOutliers}
+	Here, the solid curve is the result of the locally weighted regression analysis, and the shaded area is the 95\% confidence interval for that analysis.
+	The dashed line is the result of the linear regression.
+\end{figure}

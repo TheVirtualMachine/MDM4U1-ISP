@@ -20,18 +20,19 @@
 \usepackage{xparse}
 \usepackage{import}
 \usepackage{float}
-%\usepackage{graphicx}
-\usepackage[draft]{graphicx}
+\usepackage{graphicx}
+%\usepackage[draft]{graphicx}
 \usepackage{textcomp}
 \usepackage{tasks}
 \usepackage{listings}
+\usepackage{float}
 
 % Citations
 \usepackage[backend=biber,urldate=iso8601]{biblatex}
 \usepackage[hidelinks]{hyperref}
 
 % References
-\usepackage{cleveref}
+\usepackage{varioref}
 
 \addbibresource{References.bib}
 \setlength{\bibitemsep}{\baselineskip}
@@ -50,7 +51,10 @@
 \renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
 
 % Reference formatting.
-\crefname{subsection}{subsection}{subsections}
+\labelformat{section}{section~#1}
+\labelformat{subsection}{subsection~#1}
+\labelformat{figure}{figure~#1}
+\labelformat{equation}{equation~(#1)}
 
 % Source code formatting.
 \lstset{ %
@@ -69,6 +73,9 @@
 	showtabs=false,                    % show tabs within strings adding particular underscores
 	tabsize=8,	                   % sets default tabsize to 8 spaces
 }
+
+% Image formatting.
+\graphicspath{ {./Images/} }
 
 \frenchspacing
 

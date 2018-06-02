@@ -13,14 +13,14 @@ Similarly, the more a respondent's answers differ from the mean set of answers, 
 
 Both purity and orthodoxy are bound in the range $[-1, 1]$.
 
-We describe the general scoring system in \cref{subsec:scoring}.
-This scoring system is used to calculate the purity metric described in \cref{subsec:purityMetric} and the orthodoxy metric described in \cref{subsec:orthodoxyMetric}.
+We describe the general scoring system in \vref{subsec:scoring}.
+This scoring system is used to calculate the purity metric described in \vref{subsec:purityMetric} and the orthodoxy metric described in \vref{subsec:orthodoxyMetric}.
 
 \subsection{Scoring}\label{subsec:scoring}
 While participants answered each food question on a 0 to 10 scale, it is more convenient to perform calculations using a $-5$ to 5 scale.
 We converted responses from the 0 to 10 scale to the $-5$ to 5 scale by subtracting each response from 5.
 
-Formally, for each response to a food question, we calculate the score for the response by the passing the response through the sandwich spectrum function, defined in \cref{def:sandwichSpectrum}.
+Formally, for each response to a food question, we calculate the score for the response by the passing the response through the sandwich spectrum function, defined in \vref{def:sandwichSpectrum}.
 
 \begin{definition}[Sandwich spectrum function]\label{def:sandwichSpectrum}
 	The sandwich spectrum function is defined as:
@@ -41,7 +41,7 @@ We can create a table for $s$:
 
 One will note that this gives responses that were originally high a lower score.
 This is intentional.
-\Cref{subsec:purityMetric} will show it to be useful for calculating the purity metric, and \cref{subsec:orthodoxyMetric} will show it to be irrelevant for calculating the orthodoxy metric.
+\Vref{subsec:purityMetric} will show it to be useful for calculating the purity metric, and \vref{subsec:orthodoxyMetric} will show it to be irrelevant for calculating the orthodoxy metric.
 
 \subsection{Purity}\label{subsec:purityMetric}
 The purity score for a respondent is defined as the sum of a respondent's scores divided by the maximum possible score.
@@ -58,7 +58,7 @@ This means that the maximum possible score is $43 \times 5 = 215$.
 
 This definition illustrates why we subtract each response from 5 to get the score.
 The sandwich spectrum function will assign higher purity values for lower responses.
-Since a lower response to a question implies a more pure definition of a sandwich, \cref{def:sandwichSpectrum} is a valid metric.
+Since a lower response to a question implies a more pure definition of a sandwich, \vref{def:sandwichSpectrum} is a valid metric.
 
 \subsection{Orthodoxy}\label{subsec:orthodoxyMetric}
 To calculate orthodoxy for each respondent, we take the score for each question as a dimension of a vector, which creates a vector in $43$-dimensional Euclidean space.
@@ -92,4 +92,4 @@ The orthodoxy score for a respondent is defined as the cosine similarity between
 Since we are calculating orthodoxy as the cosine of the angle between two vectors, it is useful to have some vector components be negative, as that allows respondents to have a negative orthodoxy score if they answer opposite to the mean response.
 It does not matter what direction the vectors are in, as we are only looking at the angle between them.
 This means that the sandwich spectrum function could have been defined as subtracting 5 instead of subtracting from 5 for the purposes of the orthodoxy function.
-Since both definitions would have worked for orthodoxy, we stick with \cref{def:sandwichSpectrum} for the sake of consistency with the purity metric.
+Since both definitions would have worked for orthodoxy, we stick with \vref{def:sandwichSpectrum} for the sake of consistency with the purity metric.
