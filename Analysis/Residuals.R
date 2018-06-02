@@ -10,6 +10,7 @@ residualPlotData <- data
 # Create the linear model.
 mod <- lm(orthodoxy ~ purity, data = residualPlotData)
 df <- augment(mod)
+which(df$.resid < -0.75)
 
 # Create the residual plot.
 dataPlot <- ggplot(df, aes(.fitted, .resid)) + geom_point()
