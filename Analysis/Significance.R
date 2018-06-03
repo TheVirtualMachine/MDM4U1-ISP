@@ -17,6 +17,7 @@ coef(linearModel)
 print("Correlations")
 paste("r =", cor(significanceData$purity, y = significanceData$orthodoxy))
 paste("r^2 =", summary(linearModel)$r.squared)
+paste("p =", summary(linearModel)$coefficients[2,4])
 
 print("================================================================================")
 
@@ -26,3 +27,5 @@ print("Coefficients")
 coef(quadraticModel)
 print("Correlations")
 paste("r^2 =", summary(quadraticModel)$r.squared)
+#paste("p =", summary(quadraticModel)$coefficients[,4])
+summary(quadraticModel)

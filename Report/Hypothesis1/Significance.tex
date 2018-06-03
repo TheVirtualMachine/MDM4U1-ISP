@@ -1,1 +1,30 @@
 \chapter{Significance}\label{chap:significance}
+
+From the somewhat low magnitude of the $r$ and $r^2$ values, the results in \vref{chap:outliers} may not seem significant at first.
+
+However, $r$ and $r^2$ only show the strength of the correlation, not the significance.
+
+To calculate the significance of our results, we must calculate the $p$-value for both our linear and quadratic models.\cite{pVals}
+
+If the $p$-value of a correlation is less than $0.05$, then it is considered to be significant, and not accidental.
+A $p$-value less than $0.05$ is strong evidence against the null hypothesis.\cite{pVals}
+
+We can use the program from \vref{src:significance} to calculate the $p$-values.
+
+\section{Linear model}
+The $p$-value from the linear model as reported by the R code in \vref{src:significance} is:
+\[p \approx 0.0185072496701593\]
+
+This is less than $0.05$, which means that this result is significant.
+This proves that our first hypothesis is correct.
+While the correlation is not incredibly strong, the low $p$-value proves it to be non-accidental.
+
+Sandwich purity and sandwich orthodoxy have a significant weak positive correlation.
+
+\section{Quadratic model}
+The $p$-value from the quadratic model as reported by the R code in \vref{src:significance} is:
+\[p < 2.2 \times 10 ^ {-16}\]
+
+R fails to calculate the exact $p$-value because it is so small that computers are incapable of accurately calculating it.
+
+This $p$-value is much less than $0.05$, which demonstrates that our quadratic model is incredibly accurate.
