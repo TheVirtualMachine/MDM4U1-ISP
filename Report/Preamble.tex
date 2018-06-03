@@ -27,6 +27,8 @@
 \usepackage{listings}
 \usepackage{float}
 \usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{csquotes}
 
 % Citations
 \usepackage[backend=biber,urldate=iso8601]{biblatex}
@@ -35,7 +37,8 @@
 % References
 \usepackage{varioref}
 
-\addbibresource{References.bib}
+\addbibresource{ImageReferences.bib}
+\addbibresource{JustificationReferences.bib}
 \setlength{\bibitemsep}{\baselineskip}
 
 % Title page setup.
@@ -59,6 +62,10 @@
 \labelformat{table}{table~#1}
 \labelformat{equation}{equation~(#1)}
 
+% Spacing adjustments.
+\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
+\titleformat{\chapter}[display]{\Huge\bfseries}{\chaptertitlename{} \thechapter}{5pt}{\LARGE}
+
 % Source code formatting.
 \lstset{ %
 	basicstyle=\ttfamily\footnotesize, % the size of the fonts that are used for the code
@@ -80,6 +87,10 @@
 % Image formatting.
 \graphicspath{ {./Images/} }
 
+% One space after periods.
 \frenchspacing
+
+% Circle for second level itemization.
+\renewcommand{\labelitemii}{$\circ$}
 
 \input{CustomMacros}
