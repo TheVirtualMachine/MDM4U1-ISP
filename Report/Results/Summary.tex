@@ -1,31 +1,36 @@
 \chapter{Results summary}
+All numbers in this chapter have been rounded to 5 digits after the decimal.
 
 \section{Data with outliers}
 \begin{longtable}{rrrlll}
-	\caption{The results of all respondents with outliers included. Teachers had their stream set to ``Teacher''.}\\
+	\caption{The results of all respondents with outliers included. Teachers had their stream set to ``Teacher''.}
 	\label{table:outliers}
-	\input{WithOutliers}
+	\input{WithOutliersResults}
 \end{longtable}
 
 \section{Data without outliers}
 See \vref{chap:outliers} for an explanation of how we identified and removed outliers.
 The numbers given for removed outliers match with those in \vref{table:outliers}.
 \begin{longtable}{rrrlll}
-	\caption{The results of all respondents with outliers removed. Teachers had their stream set to ``Teacher''.}\\
+	\caption{The results of all respondents with outliers removed. Teachers had their stream set to ``Teacher''.}
 	\label{table:noOutliers}
-	\input{NoOutliers}
+	\input{NoOutliersResults}
 \end{longtable}
 
 \section{Summary with outliers}
-\begin{longtable}{c|c}
-	\caption{A summary of all respondents with outliers included.}\\
+\begin{table}[H]
+	\caption{A summary of all respondents with outliers included.}
 	\label{table:outliersSummary}
-	\input{WithOutliersSummary}
-\end{longtable}
+	\begin{center}
+		\input{WithOutliersSummary}
+	\end{center}
+\end{table}
 
 \section{Summary without outliers}
-\begin{longtable}{c|c}
-	\caption{A summary of all respondents with outliers removed.}\\
+\begin{table}[H]
+	\caption{A summary of all respondents with outliers removed.}
 	\label{table:noOutliersSummary}
-	\input{NoOutliersSummary}
-\end{longtable}
+	\begin{center}
+		\input{NoOutliersSummary}
+	\end{center}
+\end{table}

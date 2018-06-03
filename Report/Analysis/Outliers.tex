@@ -1,43 +1,46 @@
 \chapter{Outliers}\label{chap:outliers}
 
-We begin our analysis by plotting the purity vs orthodoxy and performing both a linear and locally weighted regression analysis in \vref{fig:purityOrthodoxyStreamOutliers}.
+We begin our analysis by plotting the purity vs orthodoxy and performing a linear, quadratic, and locally weighted analysis in \vref{fig:purityOrthodoxyStreamOutliers}.
 
-The solid curve is the result of the locally weighted regression analysis, and the shaded area is the 95\% confidence interval for that analysis.
-The dashed line is the result of the linear regression.
+The solid red curve is the result of the locally weighted analysis, and the shaded area is the 99\% confidence interval for that analysis.
+The dashed black line is the result of the linear line of best fit.
+The dotted blue line is the result of the quadratic curve of best fit.
 
 \section{With outliers}
 \begin{figure}[H]
+	\graphimage{StreamPurityVsOrthodoxyWithOutliers}
 	\caption{A plot of purity vs orthodoxy with data points coloured based on stream.}
 	\label{fig:purityOrthodoxyStreamOutliers}
-	\graphimage{StreamPurityVsOrthodoxyOutliers}
 \end{figure}
 
 The linear regression has a positive slope, which proves the first hypothesis that purity and orthodoxy are positively correlated.
+We will investigate the strength and significance of the correlation in \vref{chap:significance}.
 
 \section{Identifying outliers}
-From the locally weighted regression analysis, it is clear that some points are extremely deviate.
-We next create residual plots using the linear model in \vref{fig:linearResidualOutliers}.
+From the this analysis, it is clear that some points are extremely deviate.
+We next create a residual plot using the quadratic model in \vref{fig:quadraticResidualOutliers}.
 
 \begin{figure}[H]
-	\caption{A residual plot using the linear regression analysis method.}
-	\label{fig:linearResidualOutliers}
-	\graphimage{LinearResidualPlot}
+	\graphimage{QuadraticResidualPlotWithOutliers}
+	\caption{A residual plot using the quadratic regression analysis method.}
+	\label{fig:quadraticResidualOutliers}
 \end{figure}
 
-We will eliminate any points with an absolute residual exceeding a certain value.
-
-For the linear analysis, we exclude any points with an absolute residual above $0.76$.
-These are respondents \#81, and \#111.
-We will continue the rest of the analysis as if they did not do the survey at all.
+We calculate the interquartile range of the residuals and remove any data that are $1.5$ times the ICQ above the third quartile or $1.5$ times the ICQ below the first quartile.
+This is done using the program in \vref{src:outliers}.
+This program then creates a new file for analyzing with the following respondents removed: 7, 51, 59, 62, 64, 69, 81, 82, 83, 103, 113, 120, 125, and 130.
 
 \section{Outliers removed}
 We once again plot orthodoxy vs purity by stream in \vref{fig:purityOrthodoxyStreamNoOutliers}, this time with the outliers removed.
 \begin{figure}[H]
+	\graphimage{StreamPurityVsOrthodoxyNoOutliers}
 	\caption{A plot of purity vs orthodoxy with data points coloured based on stream. Outliers have been removed.}
 	\label{fig:purityOrthodoxyStreamNoOutliers}
-	\graphimage{StreamPurityVsOrthodoxyNoOutliers}
-	Here, the solid curve is the result of the locally weighted regression analysis, and the shaded area is the 95\% confidence interval for that analysis.
-	The dashed line is the result of the linear regression.
 \end{figure}
+The solid red curve is the result of the locally weighted analysis, and the shaded area is the 99\% confidence interval for that analysis.
+The dashed black line is the result of the linear line of best fit.
+The dotted blue line is the result of the quadratic curve of best fit.
 
-From this, we can clearly see that the two outliers removed were significantly effecting the correlation, especially for the locally weighted regression analysis.
+\section{Effect of outliers on the data}
+Removing the outliers does not significantly effect the curves due to the high sample size.
+However, it does greatly increase the accuracy of the model and only a handful of points were removed.
