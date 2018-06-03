@@ -6,3 +6,4 @@ data$purity <- round(data$purity, digits=5)
 data$orthodoxy <- round(data$orthodoxy, digits=5)
 data <- data[,-4]
 write.csv(data, file = "Results.csv")
+write.csv(summary(data), file = "Summary.csv")
