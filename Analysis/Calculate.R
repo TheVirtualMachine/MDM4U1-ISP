@@ -16,8 +16,8 @@ lockBinding("STREAM_COLUMN", globalenv())
 lockBinding("QUESTIONS_START", globalenv())
 lockBinding("QUESTIONS_END", globalenv())
 
-respondents <- read.csv("CleanedData.csv", check.names = FALSE) # Read in the CSV with outliers.
-#respondents <- read.csv("NoOutliers.csv", check.names = FALSE) # Read in the CSV without outliers.
+#respondents <- read.csv("CleanedData.csv", check.names = FALSE) # Read in the CSV with outliers.
+respondents <- read.csv("NoOutliers.csv", check.names = FALSE) # Read in the CSV without outliers.
 NUM_RESPONDENTS <- nrow(respondents)
 lockBinding("NUM_RESPONDENTS", globalenv())
 

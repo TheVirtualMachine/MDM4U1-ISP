@@ -14,7 +14,23 @@ The dotted blue line is the result of the quadratic curve of best fit.
 \end{figure}
 
 The linear regression has a positive slope, which proves the first hypothesis that purity and orthodoxy are positively correlated.
-We will investigate the strength and significance of the correlation in \vref{chap:significance}.
+We will investigate the significance of the correlation in \vref{chap:significance}.
+
+\subsection{Correlation calculations including outliers}
+We use the program in \vref{src:outliers} to calculate the numbers in this subsection.
+
+\subsubsection{Linear model}
+\paragraph{Equation of the linear model}
+\[y \approx 0.1009528x + 0.6800947\]
+\paragraph{$r$ values of the linear model}
+\[r \approx 0.125253454074209\]
+\[r^2 \approx 0.01568842775752\]
+
+\subsubsection{Quadratic model}
+\paragraph{Equation of the quadratic model}
+\[y \approx -1.3025366x^2 + 0.3363544x + 0.6757950\]
+\paragraph{$r^2$ value of the quadratic model}
+\[r^2 \approx 0.25095758979336\]
 
 \section{Identifying outliers}
 From the this analysis, it is clear that some points are extremely deviate.
@@ -41,6 +57,25 @@ The solid red curve is the result of the locally weighted analysis, and the shad
 The dashed black line is the result of the linear line of best fit.
 The dotted blue line is the result of the quadratic curve of best fit.
 
+\subsection{Correlation calculations with outliers removed}
+We use the program in \vref{src:outliers} to calculate the numbers in this subsection.
+
+\subsubsection{Linear model}
+\paragraph{Equation of the linear model}
+\[y \approx 0.1138999x + 0.7360640\]
+\paragraph{$r$ values of the linear model}
+\[r \approx \num{0.209580523324373}\]
+\[r^2 \approx \num{0.043923995756918}\]
+
+\subsubsection{Quadratic model}
+\paragraph{Equation of the quadratic model}
+\[y \approx -1.3512289x^2 + 0.3633135x + 0.7303165\]
+\paragraph{$r^2$ value of the quadratic model}
+\[r^2 \approx \num{0.651494497892727}\]
+
 \section{Effect of outliers on the data}
 Removing the outliers does not significantly effect the curves due to the high sample size.
 However, it does greatly increase the accuracy of the model and only a handful of points were removed.
+This is especially notable in the $r^2$ value for the quadratic model, which more than doubles.
+
+Unless otherwise specified, the rest of this paper will be excluding outliers from calculations.
