@@ -2,8 +2,10 @@
 
 source("Calculate.R")
 
-data$purity <- round(data$purity, digits=5)
-data$orthodoxy <- round(data$orthodoxy, digits=5)
-data <- data[,-4]
-write.csv(data, file = "Results.csv")
-write.csv(summary(data), file = "Summary.csv")
+tableData <- data
+
+tableData$purity <- round(tableData$purity, digits=5)
+tableData$orthodoxy <- round(tableData$orthodoxy, digits=5)
+tableData <- tableData[,-4]
+write.csv(tableData, file = "Results.csv")
+write.csv(summary(tableData), file = "Summary.csv")
