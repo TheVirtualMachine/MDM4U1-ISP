@@ -14,7 +14,7 @@ lockBinding("STREAM_COLUMN", globalenv())
 lockBinding("QUESTIONS_START", globalenv())
 lockBinding("QUESTIONS_END", globalenv())
 
-respondents <- read.csv("CleanedData.csv") # Read in the CSV.
+respondents <- read.csv("NoOutliers.csv") # Read in the CSV.
 
 print(paste(nrow(respondents), "respondents"))
 
