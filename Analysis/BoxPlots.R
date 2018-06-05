@@ -24,6 +24,7 @@ makeBoxPlot <- function(categoryData, categoryName, categoryTitle) {
 makeBoxPlot(data$grade, "grade", "Grade")
 makeBoxPlot(data$background, "background", "Ethnic Background")
 makeBoxPlot(data$stream, "stream", "Stream")
+makeBoxPlot(data$subjects, "subjects", "Subjects")
 
 boxPlotData <- data
 
@@ -32,11 +33,11 @@ dataPlot <- ggplot(boxPlotData, aes(x = 1, y = purity)) # Setup the plot.
 dataPlot <- dataPlot + geom_boxplot() # Add the data points.
 dataPlot <- dataPlot + labs(x = "All respondents", y = "Purity") # Give axes proper labels.
 dataPlot <- dataPlot + theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) # Remove the x axis.
-ggsave("PurityBoxPlot.pdf", plot=dataPlot, width=5.5, height=5)
+ggsave("PurityBoxPlot.pdf", plot=dataPlot, width=3, height=5)
 
 # Create the orthodoxy plot.
 dataPlot <- ggplot(boxPlotData, aes(x = 1, y = orthodoxy)) # Setup the plot.
 dataPlot <- dataPlot + geom_boxplot() # Add the data points.
 dataPlot <- dataPlot + labs(x = "All respondents", y = "Orthodoxy") # Give axes proper labels.
 dataPlot <- dataPlot + theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) # Remove the x axis.
-ggsave("OrthodoxyBoxPlot.pdf", plot=dataPlot, width=5.5, height=5)
+ggsave("OrthodoxyBoxPlot.pdf", plot=dataPlot, width=3, height=5)

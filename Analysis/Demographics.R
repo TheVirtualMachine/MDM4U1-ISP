@@ -11,9 +11,10 @@ makeBarPlot <- function(categoryData, categoryName, categoryTitle) {
 	dataPlot <- dataPlot + geom_bar() # Add the bar plot.
 	dataPlot <- dataPlot + labs(x = categoryTitle, y = "Count") # Give axes proper labels.
 	dataPlot <- dataPlot + theme(legend.position = "none") # Remove the legend.
-	ggsave(paste(categoryTitle, "BarPlot.pdf", sep = ""), plot=dataPlot, width=5.5, height=3)
+	ggsave(paste(categoryTitle, "BarPlot.pdf", sep = ""), plot=dataPlot, width=8, height=3)
 }
 
 makeBarPlot(data$grade, "grade", "Grade")
 makeBarPlot(data$background, "background", "Ethnic Background")
 makeBarPlot(data$stream, "stream", "Stream")
+makeBarPlot(data$subjects, "subjects", "Subjects")
