@@ -56,14 +56,6 @@
 \renewcommand{\maketitlehookb}{\begin{center}\LARGE\subT\end{center}\vskip 10ex}
 \renewcommand{\maketitlehookc}{\begin{center}\Large\instuteName\end{center}\vskip 15ex}
 
-% Reference formatting.
-\labelformat{chapter}{chapter~#1}
-\labelformat{section}{section~#1}
-\labelformat{subsection}{subsection~#1}
-\labelformat{figure}{figure~#1}
-\labelformat{table}{table~#1}
-\labelformat{equation}{equation~(#1)}
-
 % Spacing adjustments.
 \titlespacing*{\chapter}{0pt}{-30pt}{20pt}
 \titleformat{\chapter}[display]{\Huge\bfseries}{\chaptertitlename{} \thechapter}{5pt}{\LARGE}
@@ -99,3 +91,12 @@
 \setcounter{secnumdepth}{4}
 
 \input{CustomMacros}
+
+% Reference formatting.
+\labelformat{chapter}{chapter~#1}
+\labelformat{section}{section~#1}
+\labelformat{subsection}{subsection~#1}
+\labelformat{figure}{figure~#1}
+\labelformat{table}{table~#1}
+\labelformat{definition}{definition~#1}
+\labelformat{equation}{equation~(#1)}

@@ -17,24 +17,24 @@ The linear regression has a positive slope, which proves the first hypothesis th
 We will investigate the significance of the correlation in \vref{chap:significance}.
 
 \subsection{Correlation calculations including outliers}
-We use the program in \vref{src:outliers} to calculate the numbers in this subsection.
+We use the program in \vref{src:significance} to calculate the numbers in this subsection.
 
 \subsubsection{Linear model}
 \paragraph{Equation of the linear model}
-\[y \approx 0.1009528x + 0.6800947\]
+\[y \approx \num{0.1009528}x + \num{0.6800947}\]
 \paragraph{$r$ values of the linear model}
-\[r \approx 0.125253454074209\]
-\[r^2 \approx 0.01568842775752\]
+\[r \approx \num{0.125253454074209}\]
+\[r^2 \approx \num{0.01568842775752}\]
 
 \subsubsection{Quadratic model}
 \paragraph{Equation of the quadratic model}
-\[y \approx -1.3025366x^2 + 0.3363544x + 0.6757950\]
+\[y \approx \num{-1.3025366}x^2 + \num{0.3363544}x + \num{0.6757950}\]
 \paragraph{$r^2$ value of the quadratic model}
-\[r^2 \approx 0.25095758979336\]
+\[r^2 \approx \num{0.25095758979336}\]
 
 \section{Identifying outliers}
-From the this analysis, it is clear that some points are extremely deviate.
-We next create a residual plot using the quadratic model in \vref{fig:quadraticResidualOutliers}.
+From this analysis, it is clear that some respondents are highly deviant.
+We next use the quadratic mode to create a residual plot in \vref{fig:quadraticResidualOutliers}.
 
 \begin{figure}[H]
 	\graphimage{QuadraticResidualPlotWithOutliers}
@@ -43,7 +43,7 @@ We next create a residual plot using the quadratic model in \vref{fig:quadraticR
 \end{figure}
 
 We calculate the interquartile range of the residuals and remove any data that are $1.5$ times the ICQ above the third quartile or $1.5$ times the ICQ below the first quartile.
-This is done using the program in \vref{src:outliers}.
+This is done using the program in \vref{src:significance}.
 This program then creates a new file for analyzing with the following respondents removed: 7, 51, 59, 62, 64, 69, 81, 82, 83, 103, 113, 120, 125, and 130.
 
 \section{Outliers removed}
@@ -58,18 +58,18 @@ The dashed black line is the result of the linear line of best fit.
 The dotted blue line is the result of the quadratic curve of best fit.
 
 \subsection{Correlation calculations with outliers removed}
-We use the program in \vref{src:outliers} to calculate the numbers in this subsection.
+We use the program in \vref{src:significance} to calculate the numbers in this subsection.
 
 \subsubsection{Linear model}
 \paragraph{Equation of the linear model}
-\[y \approx 0.1138999x + 0.7360640\]
+\[y \approx \num{0.1138999}x + \num{0.7360640}\]
 \paragraph{$r$ values of the linear model}
 \[r \approx \num{0.209580523324373}\]
 \[r^2 \approx \num{0.043923995756918}\]
 
 \subsubsection{Quadratic model}
 \paragraph{Equation of the quadratic model}
-\[y \approx -1.3512289x^2 + 0.3633135x + 0.7303165\]
+\[y \approx \num{-1.3512289}x^2 + \num{0.3633135}x + \num{0.7303165}\]
 \paragraph{$r^2$ value of the quadratic model}
 \[r^2 \approx \num{0.651494497892727}\]
 

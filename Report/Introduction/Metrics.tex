@@ -50,15 +50,18 @@ The maximum score for a question is 5, and there are 43 food questions.
 This means that the maximum possible score is $43 \times 5 = 215$.
 
 \begin{definition}[Sadwich purity function]
-	For a given response with a set of 43 food answers, $A$, we define the sandwich purity function as:
+	Let $A$ be the set of 43 food answers, each of which is a vector in $\real^{43}$.
+
+	Then, we define the sandwich purity function as:
 	\begin{equation}
 		p \from \real^{43} \to \real\ \text{by}\ p(A) = \frac{\sum_{i = 1}^{43} A_i}{215}
 	\end{equation}
 \end{definition}
 
 This definition illustrates why we subtract each response from 5 to get the score.
-The sandwich spectrum function will assign higher purity values for lower responses.
-Since a lower response to a question implies a more pure definition of a sandwich, \vref{def:sandwichSpectrum} is a valid metric.
+The sandwich spectrum function will assign higher scores for lower responses.
+The purity function assigns greater purity values for higher scores.
+Since a lower response to a question implies a more pure definition of a sandwich, \vref{def:sandwichSpectrum} is a valid metric for scoring.
 
 \subsection{Orthodoxy}\label{subsec:orthodoxyMetric}
 To calculate orthodoxy for each respondent, we take the score for each question as a dimension of a vector, which creates a vector in $43$-dimensional Euclidean space.
@@ -83,7 +86,7 @@ The orthodoxy score for a respondent is defined as the cosine similarity between
 \begin{definition}[Sandwich orthodoxy function]
 	To calculate the orthodoxy score for a respondent:
 
-	Let $\vv{r}$ be a vector in $\real^{43}$ defined as having its each of its components equal to the score for each food question.
+	Let $\vv{r}$ be a vector in $\real^{43}$ defined as having each of its components equal to the score for each food question.
 	\begin{equation}
 		o \from \real^{43} \to \real\ \text{by}\ o(\vv{r}) = \frac{\vv{r} \cdot \vv{m}}{\norm{\vv{r}} \norm{\vv{m}}}
 	\end{equation}
